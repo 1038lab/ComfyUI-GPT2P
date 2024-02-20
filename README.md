@@ -6,7 +6,7 @@ Loads the given gtp2 model to generate prompt
 
 
 #### Models
-* [Gustavosta/MagicPrompt-Stable-Diffusion] (https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)
+* [Gustavosta/MagicPrompt-Stable-Diffusion](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)
 * [daspartho/prompt-extend (~500mb)](https://huggingface.co/daspartho/prompt-extend)
 * [succinctly/text2image-prompt-generator (~600mb)](https://huggingface.co/succinctly/text2image-prompt-generator) - Trained on Midjourney prompts
 * [microsoft/Promptist (~500mb)](https://huggingface.co/microsoft/Promptist) - Read the paper [here](https://arxiv.org/abs/2212.09611)
