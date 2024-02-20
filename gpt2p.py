@@ -1,6 +1,34 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import re
 
+
+# ShowText node
+class ShowText_GPT2P:
+    def __init__(self):
+        pass
+    
+    @classmethod
+    def INPUT_TYPES(s):
+
+        return {
+            "required": {        
+                "text": ("STRING", {"forceInput": True}),     
+                },
+            "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
+            }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("text",)
+    OUTPUT_NODE = True
+    FUNCTION = "showtext_text"
+
+    CATEGORY = "🚀GPT2P"
+
+    def showtext_text(self, text, prompt=None, extra_pnginfo=None):
+        return {"ui": {"string": [text,]}, "result": (text,)}
+
+# GPT2P Node
+
 class GPT2PNode:
     def __init__(self):
         self.models = {}
@@ -41,11 +69,11 @@ class GPT2PNode:
                 }),
             },
         }
-
+       
     RETURN_TYPES = ("CONDITIONING", "STRING",)
     RETURN_NAMES = ("CONDITIONING","STRING",)
     FUNCTION = "generate"
-    CATEGORY = "conditioning"
+    CATEGORY = "🚀GPT2P"
 
     def generate(self, clip, text, model_repo, temperature):
         if self.tokenizer == None:
@@ -93,11 +121,14 @@ class GPT2PNode:
         return ([[cond, {"pooled_output": pooled}]], new_prompt,)
 
 
-# Update the NODE_CLASS_MAPPINGS and NODE_DISPLAY_NAME_MAPPINGS to include the GPT2PNode
+# Update the NODE_CLASS_MAPPINGS and NODE_DISPLAY_NAME_MAPPINGS to include the GPT2PNode and ShowTextNode
 NODE_CLASS_MAPPINGS = {
-    "GPT2PNode": GPT2PNode
+    "GPT2PNode": GPT2PNode,
+    "ShowText_GPT2P": ShowText_GPT2P
 }
 
+
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "GPT2PNode": "GPT Prompt Generator"
+    "GPT2PNode": "💬 GPT Prompt Generator",
+    "ShowText_GPT2P": "📄 Show Text"
 }
