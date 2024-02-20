@@ -16,7 +16,6 @@ class GPT2PNode:
             "required": {
                 "clip": ("CLIP",),
                 "text": ("STRING", {"multiline": True}),
-
                 "model_repo": ([
                         "Gustavosta/MagicPrompt-Stable-Diffusion",
                         "daspartho/prompt-extend",
@@ -33,7 +32,6 @@ class GPT2PNode:
                         "Meli/GPT2-Prompt",
                         "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
                 ],),
-
                 "temperature": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.1,
