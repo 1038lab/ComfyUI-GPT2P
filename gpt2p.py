@@ -17,8 +17,7 @@ class GPT2PNode:
                 "clip": ("CLIP",),
                 "text": ("STRING", {"multiline": True}),
 
-                "model_repo": ("SELECT", {
-                    "options": [
+                "model_repo": ([
                         "Gustavosta/MagicPrompt-Stable-Diffusion",
                         "daspartho/prompt-extend",
                         "succinctly/text2image-prompt-generator", 
@@ -33,8 +32,7 @@ class GPT2PNode:
                         "crumb/bloom-560m-RLHF-SD2-prompter-aesthetic",
                         "Meli/GPT2-Prompt",
                         "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
-                    ]
-                }),
+                ],),
 
                 "temperature": ("FLOAT", {
                     "default": 1.0,
