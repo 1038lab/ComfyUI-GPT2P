@@ -9,17 +9,33 @@ class GPT2PNode:
         pass
     @classmethod
     def INPUT_TYPES(cls):
-        """
-        Defines input types for the GPT-2 node
-        """
+        
+       # Defines input types for the GPT-2 node
+        
         return {
             "required": {
                 "clip": ("CLIP",),
                 "text": ("STRING", {"multiline": True}),
-                "model_repo": ("STRING", {
-                    "default": "Gustavosta/MagicPrompt-Stable-Diffusion",
-                    "multiline": False
+
+                "model_repo": ("SELECT", {
+                    "options": [
+                        "Gustavosta/MagicPrompt-Stable-Diffusion",
+                        "daspartho/prompt-extend",
+                        "succinctly/text2image-prompt-generator", 
+                        "microsoft/Promptist",
+                        "AUTOMATIC/promptgen-lexart",
+                        "AUTOMATIC/promptgen-majinai-safe",
+                        "AUTOMATIC/promptgen-majinai-unsafe",
+                        "Gustavosta/MagicPrompt-Dalle",
+                        "kmewhort/stable-diffusion-prompt-bolster",
+                        "Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator",
+                        "Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator",
+                        "crumb/bloom-560m-RLHF-SD2-prompter-aesthetic",
+                        "Meli/GPT2-Prompt",
+                        "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
+                    ]
                 }),
+
                 "temperature": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.1,
@@ -41,7 +57,7 @@ class GPT2PNode:
             self.tokenizer.pad_token = self.tokenizer.eos_token
             self.tokenizer.padding_side = "left"
         num_return_sequences = 1
-        max_length = 150 # max: 512
+        max_length = 100 # max: 512
 
         # Load the model based on the model_repo
         if model_repo not in self.models:
