@@ -6,6 +6,8 @@ Loads the given gtp2 model to generate prompt
 
 ![tagImg](imgs/node.png)
 
+![tagImg](imgs/basic.png)
+
 ### Workflows
 
 
