@@ -4,6 +4,11 @@ ComfyUI Node - Hugging Face repositories GTP2 Prompt
 ### GPT2P Node
 Loads the given gtp2 model to generate prompt
 
+![tagImg](imgs/node.png)
+
+### Workflows
+
+
 
 #### Models
 * [Gustavosta/MagicPrompt-Stable-Diffusion](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)
@@ -21,4 +26,5 @@ Loads the given gtp2 model to generate prompt
 * [Meli/GPT2-Prompt (~500mb)](https://huggingface.co/Meli/GPT2-Prompt),
 * [DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M (~550mb)](https://huggingface.co/DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M)
 
-### Workflows
+
+
