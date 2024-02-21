@@ -93,9 +93,6 @@ class GPT2PNode:
         cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)  # Encode the tokens
         return ([[cond, {"pooled_output": pooled}]], new_prompt,)
 
-
-
-
 """
 # Show Text Node
 class ShowText_GPT2P:
