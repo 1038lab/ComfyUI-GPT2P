@@ -7,7 +7,7 @@ Loads the given gtp2 model to generate prompt
 ![tagImg](imgs/node.png)
 
 ### Workflows
-![tagImg](imgs/basic.png)
+![tagImg](workflows/basic.png)
 
 
 #### Models
